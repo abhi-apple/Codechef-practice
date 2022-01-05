@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    int n,s,r,sa;
+    while(t--){
+        cin>>n>>s>>r>>sa;
+        if(n>=s){
+            s=s+r;
+        }else{
+            n=n+r;
+        }
+        if(n>=s){
+            s=s+sa;
+        }else{
+            n=n+sa;
+        }
+        cout<<n<<" "<<s;
+        if(n>=s){
+            cout<<"N"<<endl;
+        }else{
+            cout<<"S"<<endl;
+        }
+    }
+}
