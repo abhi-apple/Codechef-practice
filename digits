@@ -1,0 +1,33 @@
+#include <iostream>
+#include<algorithm>
+#include<string>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        int a;
+        int b;
+        cin>>a>>b;
+        int dig11;
+        int dig12;
+        int dig21;
+        int dig22;
+        dig12=a%10;
+        dig11=a/10;
+        dig21=b/10;
+        dig22=b%10;
+        
+        int hig1=max((dig22*10+dig12+dig21*10+dig11),(dig21*10+dig12+dig11*10+dig22));
+        int hih2=max((dig11*10+dig21+dig12*10+dig22),(dig21*10+dig12+dig11*10+dig22));
+        int fi=max(hig1,hih2);
+        
+        if(fi<(a+b)){
+            cout<<a+b<<endl;
+        }else{
+            cout<<fi;
+        }
+    }
+    return 0;
+}
